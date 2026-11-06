@@ -22,7 +22,7 @@ def line_total(line: Line) -> Decimal:
 
 def tax_for(subtotal: Decimal, rate: Decimal) -> Decimal:
     """Tax owed on a subtotal. `rate` is a fraction, e.g. Decimal('0.0825')."""
-    return Decimal(str(round(float(subtotal) * float(rate), 2)))
+    return round_cents(subtotal * rate)
 
 
 def invoice_total(lines: Iterable[Line], tax_rate: Decimal) -> Decimal:
