@@ -37,8 +37,8 @@ def business_days_between(a: date, b: date) -> int:
     Example: Friday -> Saturday is 0, Friday -> Monday is 1.
     """
     count = 0
-    day = a
-    while day <= b:  # Changed from day < b to day <= b
+    day = a + timedelta(days=1)
+    while day <= b:
         if is_business_day(day):
             count += 1
         day += timedelta(days=1)
