@@ -1,0 +1,9 @@
+[project]
+name = "ledgerlite"
+version = "0.1.0"
+description = "Tiny money and invoice helpers (demo target for the Proof Gate episode)."
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
